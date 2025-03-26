@@ -1,6 +1,3 @@
-
-
-
 <div class="container">
 
     <form action="?action=editLivre" method="POST" enctype="multipart/form-data">
@@ -10,13 +7,13 @@
         <br>
         <input type="text" name="id" value="<?php echo $result->getId() ?>" hidden>
         <label for="">Code</label>
-        <input type="text" name="code" id="" value="<?php echo $result->getCode()?>" class="form-control">
+        <input type="text" name="code" id="" value="<?php echo $result->getCode() ?>" class="form-control">
         <br>
         <label for="">Titre</label>
         <input type="text" name="titre" id="" value="<?php echo $result->getTitre()?>" class="form-control">
         <br>
-        <label for="">Date</label>
-        <input type="date" name="date" id="" value="<?php echo $result->getDate() ?>" class="form-control">
+        <label for="">Date d'Edition</label>
+        <input type="date" name="dateEdition" id="" value="<?php echo $result->getDateEdition()?>" class="form-control">
         <br>
         <label for="">Auteur</label>
         <select name="idau" id="" class="form-control">

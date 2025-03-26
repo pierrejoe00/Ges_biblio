@@ -8,8 +8,8 @@
         <label for="">Prenom</label>
         <input type="text" name="Prenom" id="" class="form-control">
         <br>
-        <label for="">Password</label>
-        <input type="password" name="pwd" id="" class="form-control">
+        <label for="">PWD</label>
+        <input type="text" name="pwd" id="" class="form-control">
         <br>
         <label for="">Email</label>
         <input type="text" name="email" id="" class="form-control">
@@ -19,8 +19,8 @@
         <br>
         <label for="">Role</label>
         <select name="role_id" id="" class="form-control">
-            <?php foreach($role as $c) : ?>
-                <option value="<?= $c->getId() ?>"><?= $c->getNom() ?></option>
+            <?php foreach($role as $ro) : ?>
+                <option value="<?= $ro->getId() ?>"><?= $ro->getNom() ?></option>
             <?php endforeach ?>
         </select>
         <br>

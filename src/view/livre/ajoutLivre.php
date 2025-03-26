@@ -1,4 +1,3 @@
-
 <div class="container">
     <form action="?action=createLivre" method="POST" enctype="multipart/form-data">
         <label for="">Image</label>
@@ -10,15 +9,15 @@
         <label for="">Titre</label>
         <input type="text" name="titre" id="" class="form-control">
         <br>
-        <label for="">Date</label>
-        <input type="date" name="date" id="" class="form-control">
-        <br>
         <label for="">Auteur</label>
         <select name="idau" id="" class="form-control">
             <?php foreach($auteur as $c) : ?>
                 <option value="<?= $c->getId() ?>"><?= $c->getPrenom() ?></option>
             <?php endforeach ?>
         </select>
+        <br>
+        <label for="">Date d'Edition</label>
+        <input type="date" name="dateEdition" id="" class="form-control">
         <br>
         <label for="">Categorie</label>
         <select name="idc" id="" class="form-control">

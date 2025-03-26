@@ -1,34 +1,35 @@
-<form action="?action=login" method="POST">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card mt-5 mb-5">
-          <div class="card-header bg-light">
-            <h3 class="text-center">Connexion</h3>
-          </div>
-          <div class="card-body">
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center min-vh-100">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0">
+                <div class="card-header text-white py-4" style="background: linear-gradient(135deg, #2c3e50, #3498db);">
+                    <h2 class="text-center mb-0">Connexion</h2>
+                </div>
+                <div class="card-body p-5" style="background-color: #f8f9fa;">
+                    <form action="?action=login" method="POST">
+                        <div class="mb-4 px-3">
+                            <label for="email" class="form-label fw-bold fs-5" style="color: #2c3e50;">Email</label>
+                            <input type="email" class="form-control form-control-lg border-0 shadow-sm py-3" id="email" name="email" required>
+                        </div>
+                        <div class="mb-5 px-3">
+                            <label for="password" class="form-label fw-bold fs-5" style="color: #2c3e50;">Mot de passe</label>
+                            <input type="password" class="form-control form-control-lg border-0 shadow-sm py-3" id="password" name="password" required>
+                        </div>
+                        <div class="d-grid gap-2 px-3">
+                            <button type="submit" class="btn btn-lg text-white py-3 fs-5" style="background: linear-gradient(135deg, #2c3e50, #3498db);">
+                                Se connecter
+                            </button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-4">
+                        <p class="text-secondary fs-5">Pas encore inscrit ? 
+                            <a href="?action=register" class="fw-bold" style="color: #3498db; text-decoration: none;">
+                                Créer un compte
+                            </a>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control form-control-lg" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg w-100">Se connecter</button>
-          </div>
-          <div class="card-footer bg-light text-center">
-            <div class="mt-3">
-              <a href="?action=register" class="link-primary">Pas encore inscrit ? Créer un compte</a>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</form>
+</div>

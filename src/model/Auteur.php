@@ -12,61 +12,58 @@ class Auteur
     #[ORM\Column(type: 'integer')]
     private int|null $id = null;
 
-    /** @var string */
     #[ORM\Column(type: 'string')]
-    private string $Nom;
+    private string $nom;
 
     #[ORM\Column(type: 'string')]
-    private string $Prenom;
-
+    private string $prenom;  
+    
     #[ORM\Column(type: 'string')]
     private string $profession;
 
-
-    function __construct($nom,$prenom,$profession){
-        $this->nom = $nom; 
+    //Constructeur
+    function __construct($nom, $prenom, $profession){
+        $this->nom = $nom;
         $this->prenom = $prenom;
         $this->profession = $profession;
     }
-        
 
-    public function getId(){
+    public function getId(): ?int
+    {
         return $this->id;
     }
 
-    public function getNom(){
+    public function getNom(): string
+    {
         return $this->nom;
     }
 
-    public function getPrenom(){
+    public function getPrenom(): string
+    {
         return $this->prenom;
     }
 
-    public function getProfession(){
+    public function getProfession(): string
+    {
         return $this->profession;
     }
 
-    public function setNom(String $nom){
+    public function setNom(string $nom): self
+    {
         $this->nom = $nom;
-        return $this->nom;
+        return $this;
     }
 
-    public function setPrenom(String $prenom){
+    public function setPrenom(string $prenom): self
+    {
         $this->prenom = $prenom;
-        return $this->prenom;
-
+        return $this;
     }
 
-    public function setProfession(String $profession){
+    public function setProfession(string $profession): self
+    {
         $this->profession = $profession;
-        return $this->profession;
+        return $this;
     }
-
-   
-
-
-
-
-    
 }
 ?>
