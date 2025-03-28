@@ -16,7 +16,7 @@
         <input type="date" name="dateEdition" id="" value="<?php echo $result->getDateEdition()?>" class="form-control">
         <br>
         <label for="">Auteur</label>
-        <select name="idau" id="" class="form-control">
+        <select name="ida" id="" class="form-control">
             <?php foreach($auteur as $c) : ?>
                 <option   value="<?= $c->getId() ?>" <?= ($c->getId() == $result->getAuteur()->getId()) ? 'selected' : ''  ?>><?= $c->getPrenom() ?></option>
             <?php endforeach ?>

@@ -10,6 +10,7 @@ class LivreController{
 
     function createLivre(){
         global $modelLivre;
+        global $modelAuteur;
         global $model;
         extract($_POST);
         // Vérifier si une image a été uploadée
@@ -22,13 +23,16 @@ class LivreController{
         } else {
             $image = NULL; // Aucun fichier sélectionné
         }
+        $auteur = $modelAuteur->getByid($ida);
         $categorie = $model->getByid($idc);
-        $modelLivre->add($code, $titre, $dateEdition, $auteur, $categorie, $image);
+        $modelLivre->add($code, $titre, $dateEdition, $image,$auteur, $categorie);
         header("location:index.php?action=listLivre");
     }
 
     function formulaireLivre(){
         global $model;
+        global $modelAuteur;
+        $auteur = $modelAuteur->getAll();
         $categories = $model->getAll();
         require_once("./src/view/Livre/ajoutLivre.php");
     }
@@ -36,7 +40,9 @@ class LivreController{
     function editLivre(){
         global $modelLivre;
         global $model;
+        global $modelAuteur;
         extract($_POST);
+        $auteur = $modelAuteur->getByid($ida);
         $categorie = $model->getByid($idc);
         $livre = $modelLivre->getByid($id);
 
@@ -49,13 +55,15 @@ class LivreController{
             // Garder l'ancienne image si aucune nouvelle n'est uploadée
             $image = $_POST['old_image'];
         }
-        $modelLivre->update($id, $code, $titre, $dateEdition, $auteur, $categorie, $image);
+        $modelLivre->update($id, $code, $titre, $dateEdition,$image, $auteur, $categorie);
         header("location:index.php?action=listLivre");
     }
 
     function updateLivre(){
         global $modelLivre;
         global $model;
+        global $modelAuteur;
+        $auteur = $modelAuteur->getAll();
         $categories = $model->getAll();
         $id = $_GET['id'];
         $result = $modelLivre->getByid($id);
@@ -65,6 +73,11 @@ class LivreController{
     function deleteLivre(){
         global $modelLivre;
         $id = $_GET["id"];
+        // Retrieve the current book to check for an image file
+        $livre = $modelLivre->getByid($id);
+        if ($livre && $livre->image && file_exists("uploads/" . $livre->image)) {
+            unlink("uploads/" . $livre->image);
+        }
         $modelLivre->delete($id);
         header("location:index.php?action=listLivre");
     }

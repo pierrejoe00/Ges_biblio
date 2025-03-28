@@ -11,10 +11,10 @@ class AuteurController {
     function createAuteur(){
         global $modelAuteur;
         global $model;
-        extract($_POST); // extraction des variables
-        // Vérifiez la cohérence du nom de variable (prefession vs profession)
+        extract($_POST);
         $modelAuteur->add($nom, $prenom, $profession);
-        header("location:index.php?action=listAuteurs");
+        header("location:index.php?action=listAuteur");
+        
     }
 
     function formulaireAuteur(){
@@ -28,7 +28,7 @@ class AuteurController {
         global $model;
         extract($_POST); // extraction des variables
         $modelAuteur->update($id, $nom, $prenom, $profession);
-        header("location:index.php?action=listAuteurs");
+        header("Location: index.php?action=listAuteur");
     }
 
     function updateAuteur(){
@@ -43,7 +43,7 @@ class AuteurController {
         global $modelAuteur;
         $id = $_GET["id"];
         $modelAuteur->delete($id);
-        header("location:index.php?action=listAuteurs");
+        header("Location: index.php?action=listAuteur");
     }
 
 }

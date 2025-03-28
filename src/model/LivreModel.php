@@ -8,9 +8,9 @@ class LivreModel{
         return $result;
     }
 
-    function add($code, $titre, $dateEdition, $auteur, $categorie, $image){
+    function add($code, $titre, $dateEdition, $image, $auteur, $categorie){
         global $entityManager;
-        $livre = new Livre($code, $titre, $dateEdition, $auteur, $categorie, $image);
+        $livre = new Livre($code, $titre, $dateEdition, $image, $auteur, $categorie);
         $livre->setImage($image);
         $entityManager->persist($livre);
         $entityManager->flush();
@@ -29,15 +29,15 @@ class LivreModel{
         return $livre;
     }
 
-    function update($id, $code, $titre, $dateEdition, $auteur, $categorie, $image){
+    function update($id, $code, $titre, $dateEdition, $image, $auteur, $categorie){
         global $entityManager;
-        $livre = $this->getById($id);
+        $livre = $this->getByid($id);
         $livre->setCode($code);
         $livre->setTitre($titre);
         $livre->setDateEdition($dateEdition);
+        $livre->setImage($image);
         $livre->setAuteur($auteur);
         $livre->setCategorie($categorie);
-        $livre->setImage($image);
         $entityManager->flush();
     }
 

@@ -33,13 +33,13 @@ class Livre
     private Categorie $categorie;
 
     //Constructeur
-    function __construct($code, $titre, $auteur, $dateEdition, $categorie, $image){
+    function __construct($code, $titre, $dateEdition, $image, $auteur, $categorie){
         $this->code        = $code;
         $this->titre       = $titre;
-        $this->auteur      = $auteur;
         $this->dateEdition = $dateEdition;
-        $this->categorie   = $categorie;
         $this->image       = $image;
+        $this->auteur      = $auteur;
+        $this->categorie   = $categorie;
     }
     
     public function getId(): ?int

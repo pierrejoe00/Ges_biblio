@@ -37,7 +37,7 @@ class Users
 
     //Constructeur
 
-    function __construct($nom,$prenom,$pwd,$email,$role){
+    function __construct($nom,$prenom,$pwd,$email,$numero,$role){
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->pwd = $pwd;

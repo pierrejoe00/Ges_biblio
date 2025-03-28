@@ -8,7 +8,7 @@ class UsersModel{
         return $result;
     }
 
-    function add($nom,$prenom,$pwd,$email,$numero){
+    function add($nom,$prenom,$pwd,$email,$numero,$role){
         global $entityManager;
         $users = new Users($nom,$prenom,$pwd,$email,$numero,$role);
         $entityManager->persist($users);

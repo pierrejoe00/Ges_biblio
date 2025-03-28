@@ -11,23 +11,26 @@ Class UsersController{
 
     function createUsers(){
         global $modelUsers;
-        global $model;
+        global $modelRole;
         extract($_POST);
-        $role = $model->getByid($role_id);
+        $role = $modelRole->getById($role_id);
         $modelUsers->add($nom,$prenom, $pwd,$email,$numero,$role);
         header("location:index.php?action=listUsers");
     }
 
     function formulaireUsers(){
+        
         global $model;
-        $role = $model->getAll();
+        global $modelRole;
+        $role = $modelRole->getAll();
         require_once("./src/view/user/ajoutUsers.php");
     }
     function editUsers(){
         global $modelUsers;
         global $model;
+        global $modelRole;
         extract($_POST);
-        $role = $mode->getByid($role_id);
+        $role = $modelRole->getByid($role_id);
         $modelUsers->update($id,$nom,$prenom, $pwd,$email,$numero,$role);
         header("location:index.php?action=listUsers");
     }
@@ -35,9 +38,10 @@ Class UsersController{
     function updateUsers(){
         global $modelUsers;
         global $model;
-        $role = $model->getAll();
+        global $modelRole;
+        $role = $modelRole->getAll();
         $id = $_GET['id'];
-        $result =  $modelProduit->getByid($id);
+        $result =  $modelUsers->getByid($id);
         require_once("./src/view/user/modifierUsers.php");
     }
 

@@ -6,7 +6,7 @@
         <input type="text" name="nom" id="" class="form-control">
         <br>
         <label for="">Prenom</label>
-        <input type="text" name="Prenom" id="" class="form-control">
+        <input type="text" name="prenom" id="" class="form-control">
         <br>
         <label for="">PWD</label>
         <input type="text" name="pwd" id="" class="form-control">

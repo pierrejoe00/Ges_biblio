@@ -18,9 +18,9 @@
         <input type="text" name="email" id="" value="<?php echo $result->getEmail() ?>" class="form-control">
         <br>
         <label for="">Role</label>
-        <select name="id" id="" class="form-control">
-            <?php foreach($role as $c) : ?>
-                <option   value="<?= $c->getId() ?>" <?= ($c->getId() == $result->getRole()->getId()) ? 'selected' : ''  ?>><?= $c->getNom() ?></option>
+        <select name="role_id" id="" class="form-control">
+            <?php foreach($role as $ro) : ?>
+                <option   value="<?= $ro->getId() ?>" <?= ($ro->getId() == $result->getRole()->getId()) ? 'selected' : ''  ?>><?= $ro->getNom() ?></option>
             <?php endforeach ?>
         </select>
         <br>
