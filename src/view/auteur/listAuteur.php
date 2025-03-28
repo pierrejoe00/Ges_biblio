@@ -1,6 +1,6 @@
 <div class="container mt-5">
 <a href="?action=addAuteur" class="btn btn-success ">Ajouter</a>
-<h3 class="mt-5">Liste des Auteurs</h3>
+<h2 class="mt-5">Gestions des Auteurs</h2>
 <table class="table table-bordered mt-5">
 
         <tr>

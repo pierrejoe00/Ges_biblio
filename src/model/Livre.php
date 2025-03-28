@@ -89,9 +89,12 @@ class Livre
         return $this;
     }
 
-    public function setDateEdition(\DateTime $dateEdition): self // changed from setPrix
+    public function setDateEdition(string|\DateTime $dateEdition): self // changed parameter to string|DateTime
     {
-        $this->dateEdition = $dateEdition;
+        if (is_string($dateEdition)) {
+            $dateEdition = new \DateTime($dateEdition);
+        }
+        $this->dateEdition = $dateEdition;  
         return $this;
     }
 

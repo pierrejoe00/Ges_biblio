@@ -13,6 +13,7 @@ class LivreController{
         global $modelAuteur;
         global $model;
         extract($_POST);
+        $dateEdition = new DateTime($dateEdition);
         // Vérifier si une image a été uploadée
         if (!empty($_FILES['image']['name'])) {
             $image = $_FILES['image']['name'];
@@ -73,9 +74,9 @@ class LivreController{
     function deleteLivre(){
         global $modelLivre;
         $id = $_GET["id"];
-        // Retrieve the current book to check for an image file
+        // Récupérer le livre pour vérifier la présence d'une image
         $livre = $modelLivre->getByid($id);
-        if ($livre && $livre->image && file_exists("uploads/" . $livre->image)) {
+        if (!empty($livre->image)  && file_exists( $livre->image)) {
             unlink("uploads/" . $livre->image);
         }
         $modelLivre->delete($id);

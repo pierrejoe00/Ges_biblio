@@ -1,5 +1,7 @@
 
 <div class="container">
+    <br>
+    <h2>Modification de Role</h2>
     <form action="?action=editRole" method="POST">
         <input type="text" name="id" value="<?php echo $result->getId() ?>" hidden>
         <label for="">Nom</label>

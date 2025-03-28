@@ -20,7 +20,7 @@ class Users
     private string $prenom; 
     
     
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type: 'string')]
     private string $pwd;
 
 
@@ -61,7 +61,7 @@ class Users
         return $this->prenom;
     }
 
-    public function getPwd(): int
+    public function getPwd(): string
     {
         return $this->pwd;
     }
@@ -93,7 +93,7 @@ class Users
         return $this;
     }
 
-    public function setPwd(int $pwd): self
+    public function setPwd(string $pwd): self
     {
         $this->pwd = $pwd;
         return $this;

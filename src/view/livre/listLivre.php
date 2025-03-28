@@ -1,6 +1,6 @@
 <div class="container mt-5">
 <a href="?action=addLivre" class="btn btn-success ">Ajouter</a>
-<h3 class="mt-5">Liste des livres</h3>
+<h2 class="mt-5">Gestions des livres</h2>
 <table class="table table-bordered mt-5">
 
         <tr>
@@ -27,8 +27,9 @@
                 </td>
                 
                 <td><?php echo $r->getTitre()  ?></td>
-                <td><?php echo $r->getDateEdition()  ?></td>
-                <td><?php echo $r->getAuteur()  ?></td>
+                <td><?php echo $r->getDateEdition()->format('Y-m-d')  ?></td>
+                
+                <td><?php echo $r->getAuteur()->getNom() ?></td>
                 <td><?php echo $r->getCategorie()->getLibelle()  ?></td>
                 <td>
                     <a href="?action=deleteLivre&id=<?php echo $r->getId() ?>" class="btn btn-danger">Supprimer</a>

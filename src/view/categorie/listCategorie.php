@@ -3,7 +3,7 @@
 
 <a href="?action=addCategorie" class="btn btn-success ">Ajouter</a>
 
-<h3 class="mt-5">Liste des Catégories</h3>
+<h2 class="mt-5">Gestion des Catégories</h2>
 <table class="table table-bordered mt-5">
 
         <tr>

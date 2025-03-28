@@ -1,6 +1,6 @@
-
-
 <div class="container">
+    <br>
+    <h2>Ajout d'Utilisateurs</h2>
     <form action="?action=createUsers" method="POST">
         <label for="">Nom</label>
         <input type="text" name="nom" id="" class="form-control">
@@ -8,8 +8,8 @@
         <label for="">Prenom</label>
         <input type="text" name="prenom" id="" class="form-control">
         <br>
-        <label for="">PWD</label>
-        <input type="text" name="pwd" id="" class="form-control">
+        <label for="">Mot de passe</label>
+        <input type="password" name="pwd" id="" class="form-control">
         <br>
         <label for="">Email</label>
         <input type="text" name="email" id="" class="form-control">

@@ -1,4 +1,6 @@
 <div class="container">
+    <br>
+    <h2>Ajout d'Auteur</h2>
     <form action="?action=createAuteur" method="POST">
         <label for="">Nom</label>
         <input type="text" name="nom" id="" class="form-control">

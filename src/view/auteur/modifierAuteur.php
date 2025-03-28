@@ -1,5 +1,6 @@
 <div class="container">
-
+    <br>
+    <h2>Modification d'Auteur</h2>
     <form action="?action=editAuteur" method="POST">
         <input type="text" name="id" value="<?php echo $result->getId() ?>" hidden>
         <label for="">Nom</label>

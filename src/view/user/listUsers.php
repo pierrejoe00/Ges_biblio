@@ -1,10 +1,6 @@
-
-
-
 <div class="container mt-5">
--
 <a href="?action=addUsers" class="btn btn-success ">Ajouter</a>
-<h3 class="mt-5">Liste des Utulisateur</h3>
+<h2 class="mt-5">Gestion des Utilisateurs</h2>
 <table class="table table-bordered mt-5">
 
         <tr>
@@ -22,7 +18,7 @@
                 <td><?php echo $r->getId()  ?></td>
                 <td><?php echo $r->getNom()  ?></td>
                 <td><?php echo $r->getPrenom()  ?></td>
-                <td><?php echo $r->getPwd()  ?></td>
+                <td><?php echo str_repeat('*', strlen($r->getPwd())) ?></td>
                 <td><?php echo $r->getEmail()  ?></td>
                 <td><?php echo $r->getNumero()  ?></td>
                 <td><?php echo $r->getRole()->getNom()  ?></td>

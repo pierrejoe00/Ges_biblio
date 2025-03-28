@@ -1,17 +1,15 @@
 <div class="container">
+    <br>
+    <h2>Ajout de Livre</h2>
     <form action="?action=createLivre" method="POST" enctype="multipart/form-data">
-        
+        <label for="">Image</label>
+        <input type="file" name="image" id="" class="form-control">
+        <br>
         <label for="">Code</label>
         <input type="text" name="code" id="" class="form-control">
         <br>
         <label for="">Titre</label>
         <input type="text" name="titre" id="" class="form-control">
-        <br>
-        <label for="">Date d'Edition</label>
-        <input type="date" name="dateEdition" id="" class="form-control">
-        <br>
-        <label for="">Image</label>
-        <input type="file" name="image" id="" class="form-control">
         <br>
         <label for="">Auteur</label>
         <select name="ida" id="" class="form-control">
@@ -20,7 +18,9 @@
             <?php endforeach ?>
         </select>
         <br>
-       
+        <label for="">Date d'Edition</label>
+        <input type="date" name="dateEdition" id="" class="form-control">
+        <br>
         <label for="">Categorie</label>
         <select name="idc" id="" class="form-control">
             <?php foreach($categories as $c) : ?>
