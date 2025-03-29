@@ -1,7 +1,6 @@
-
 <div class="container mt-5">
 
-<a href="?action=addRole" class="btn btn-success ">Ajouter</a>
+
 
 <h2 class="mt-5">Gestions des Roles</h2>
 <table class="table table-bordered mt-5">
@@ -17,7 +16,7 @@
                 <td><?php echo $r->getNom()  ?></td>
                 <td>
                     <a href="?action=deleteRole&&id=<?php echo $r->getId() ?>" class="btn btn-danger">Supprimer</a>
-                    <br>
+<br>
                     <a href="?action=updateRole&&id=<?php echo $r->getId() ?>" class="btn btn-primary">Modifier</a>
                 </td>
             </tr>
