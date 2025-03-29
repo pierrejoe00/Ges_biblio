@@ -8,7 +8,7 @@
       color: rgb(247, 246, 243) !important;
     }
   </style>
-  <a class="navbar-brand" href="#">COJO's LIBRAIRIE</a>
+  <a class="navbar-brand" href="?action=listLivre">COJO's LIBRAIRIE</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

@@ -117,8 +117,19 @@ class Users
         return $this;
     }
 
+    public function verifyEmail(string $email): bool
+    {
+        return $this->email === $email;
+    }
 
-    
+    public function verifyPassword(string $password): bool
+    {
+        return password_verify($password, $this->pwd);
+    }
 
+    public function verifyRole(string $roleName): bool
+    {
+        return $this->role->getNom() === $roleName;
+    }
 }
 ?>
