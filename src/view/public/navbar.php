@@ -26,9 +26,9 @@
     </div>
     <div class="navbar-nav ml-auto d-flex justify-content-end">
       <span class="nav-item nav-link">
-        <?php echo $_SESSION['prenom'] ?? 'Utilisateur'; ?>
+        <?php echo $_SESSION['prenom']?? 'admin'; ?>
       </span>
-      <a class="nav-item nav-link" href="?action=logout">Déconnexion</a>
+      <a class="nav-item nav-link" href="login.php">Déconnexion</a>
     </div>
   </div>
 </nav>
